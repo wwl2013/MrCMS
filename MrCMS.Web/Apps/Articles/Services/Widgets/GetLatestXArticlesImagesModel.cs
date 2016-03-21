@@ -26,6 +26,7 @@ namespace MrCMS.Web.Apps.Articles.Services.Widgets
             {
                 Articles = _session.QueryOver<Article>()
                     .Where(article => article.Parent.Id == widget.RelatedNewsList.Id && article.PublishOn != null && article.PublishOn <= CurrentRequestData.Now)
+                    .OrderBy(x => x.Weight).Asc
                     .OrderBy(x => x.PublishOn).Desc
                     .Take(widget.NumberOfArticles)
                     .Cacheable()

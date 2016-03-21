@@ -63,6 +63,12 @@
         @Html.ValidationMessageFor(x => x.MetaKeywords, "", new { @class = "error" })
     </div>
 
+    <div class="form-group">
+        @Html.LabelFor(x => x.Weight)
+        @Html.TextBoxFor(x => x.Weight, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Weight, "", new { @class = "error" })
+    </div>
+
     <hr />
     <h4>@Resource("Admin Webpage Seo SEO Analysis", "SEO Analysis") </h4>
     @Html.LabelFor(webpage => webpage.SEOTargetPhrase)

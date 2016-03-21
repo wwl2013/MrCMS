@@ -154,6 +154,8 @@ namespace MrCMS.Entities.Documents.Web
         [DisplayName("Submit button custom text")]
         public virtual string SubmitButtonText { get; set; }
 
+        [DisplayName("Weight for sorting. Less is first")]
+        public virtual int Weight { get; set; }
 
         [DisplayName("Same as parent")]
         public virtual bool InheritFrontEndRolesFromParent { get; set; }

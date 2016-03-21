@@ -45,7 +45,7 @@ namespace MrCMS.Web.Apps.Articles.Services
                         article => article.PublishOn != null && article.PublishOn.Value.YearPart() == model.Year);
             }
 
-            return query.OrderBy(x => x.PublishOn).Desc.Paged(model.Page, page.PageSize);
+            return query.OrderBy(x => x.Weight).Asc.OrderBy(x => x.PublishOn).Desc.Paged(model.Page, page.PageSize);
         }
 
         public List<ArchiveModel> GetMonthsAndYears(ArticleList articleList)
