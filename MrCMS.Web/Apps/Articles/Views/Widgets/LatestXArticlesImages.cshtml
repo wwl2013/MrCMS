@@ -1,0 +1,23 @@
+﻿@model MrCMS.Web.Apps.Articles.Models.LatestXArticlesImagesViewModel
+
+<div class="container">
+    <div class="row centered mt grid">
+        @if (Model != null)
+        {
+            if (!String.IsNullOrEmpty(Model.Title))
+            {
+                <h3>@Model.Title</h3>
+            }
+            <div class="mt"></div>
+
+            foreach (var article in Model.Articles)
+            {
+                <div class="col-lg-4" style="margin-top:20px;">
+                    <a href="/@article.LiveUrlSegment"><img src="@article.FeatureImage" alt="@article.Name" title="@article.Name" class="iman" style="max-height:300px;" data-caption="@article.Abstract" /></a>
+                </div>
+            }
+
+        }
+    </div>
+</div>
+

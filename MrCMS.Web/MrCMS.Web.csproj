@@ -30,6 +30,7 @@
     <TargetFrameworkProfile />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
     <NuGetPackageImportStamp>eff8cd49</NuGetPackageImportStamp>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -267,6 +268,7 @@
     <Compile Include="Apps\Articles\Areas\Admin\Services\GetArticleAdminViewDataUsers.cs" />
     <Compile Include="Apps\Articles\Areas\Admin\Services\GetArticleArchiveAdminViewData.cs" />
     <Compile Include="Apps\Articles\Areas\Admin\Services\GetArticleCategoriesViewData.cs" />
+    <Compile Include="Apps\Articles\Areas\Admin\Services\GetLatestArticlesImagesAdminViewData.cs" />
     <Compile Include="Apps\Articles\Areas\Admin\Services\GetLatestArticlesAdminViewData.cs" />
     <Compile Include="Apps\Articles\ArticlesApp.cs" />
     <Compile Include="Apps\Articles\Controllers\ArticleController.cs" />
@@ -279,6 +281,7 @@
     <Compile Include="Apps\Articles\Models\ArchiveModel.cs" />
     <Compile Include="Apps\Articles\Models\ArticleArchiveModel.cs" />
     <Compile Include="Apps\Articles\Models\ArticleSearchModel.cs" />
+    <Compile Include="Apps\Articles\Models\LatestXArticlesImagesViewModel.cs" />
     <Compile Include="Apps\Articles\Models\LatestXArticlesViewModel.cs" />
     <Compile Include="Apps\Articles\Pages\Article.cs" />
     <Compile Include="Apps\Articles\Pages\ArticleList.cs" />
@@ -287,10 +290,12 @@
     <Compile Include="Apps\Articles\Services\ArticlesScriptList.cs" />
     <Compile Include="Apps\Articles\Services\IArticleService.cs" />
     <Compile Include="Apps\Articles\Services\Widgets\GetArticleArchiveModel.cs" />
+    <Compile Include="Apps\Articles\Services\Widgets\GetLatestXArticlesImagesModel.cs" />
     <Compile Include="Apps\Articles\Services\Widgets\GetLatestXArticlesModel.cs" />
     <Compile Include="Apps\Articles\UrlGenerators\ArticleUrlGenerator.cs" />
     <Compile Include="Apps\Articles\Widgets\ArticleArchive.cs" />
     <Compile Include="Apps\Articles\Widgets\ArticleCategories.cs" />
+    <Compile Include="Apps\Articles\Widgets\LatestXArticlesImages.cs" />
     <Compile Include="Apps\Articles\Widgets\LatestXArticles.cs" />
     <Compile Include="Apps\Core\Controllers\UserAccountController.cs" />
     <Compile Include="Apps\Core\Controllers\RegistrationController.cs" />
@@ -2143,6 +2148,11 @@
     <Content Include="Areas\Admin\Views\WebpageSearch\Results.cshtml" />
     <Content Include="Areas\Admin\Views\WebpageSearch\Search.cshtml" />
     <Content Include="LICENSE" />
+    <Content Include="Apps\Core\Views\Shared\_secondBase.cshtml" />
+    <Content Include="Apps\Core\Views\Shared\_secondTemplate.cshtml" />
+    <Content Include="Apps\Articles\Views\Widgets\LatestXArticlesImages.cshtml" />
+    <Content Include="Apps\Articles\Areas\Admin\Views\Widget\LatestXArticlesImages.cshtml" />
+    <Content Include="Apps\Articles\Areas\Admin\Views\Widget\LatestXArticlesImagesAdd.cshtml" />
     <None Include="Properties\PublishProfiles\new.pubxml" />
     <Content Include="Themes\Default\Apps\Core\Web.config">
       <SubType>Designer</SubType>
@@ -2165,6 +2175,8 @@
     <Folder Include="Apps\Galleries\Views\Shared\" />
     <Folder Include="Apps\Galleries\Views\Widgets\" />
     <Folder Include="Apps\Galleries\Widgets\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\scripts\" />
     <Folder Include="Themes\Default\Apps\Core\Views\Pages\" />
     <Folder Include="Themes\Default\Content\" />
     <Folder Include="Themes\Default\Views\Pages\" />
